@@ -1,8 +1,9 @@
-// src/App.jsx
 import { useState } from 'react';
 import Navbar from './components/layout/Navbar';
 import Dashboard from './components/home/Dashboard';
 import QuizManager from './components/quiz/QuizManager';
+// 1. On importe les analytics
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   // view: 'home' | 'quiz'
@@ -34,6 +35,9 @@ function App() {
           />
         )}
       </main>
+
+      {/* 2. On place le composant ici, il ne sera pas visible mais il comptera les visites */}
+      <Analytics />
     </div>
   );
 }
