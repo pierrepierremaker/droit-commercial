@@ -2,20 +2,22 @@ import React from 'react';
 
 const Dashboard = ({ onStart }) => {
   
-  // Configuration de tes boutons (C'est ici que tu ajoutes des années !)
+  // Configuration des boutons
   const modules = [
     {
       id: 'general',
       title: 'Révision Générale',
-      subtitle: 'Mode infini aléatoire',
-      icon: '⚡', // Tu peux remettre les SVG si tu préfères, j'ai mis des emojis pour simplifier la lecture du code
-      color: 'blue',
-      badge: null
+      // Texte explicatif pour dire que ce n'est pas encore prêt
+      subtitle: 'Indisponible : Questions types tirées du cours à venir prochainement.', 
+      icon: '⚡', 
+      color: 'gray', // On passe la couleur en gris
+      badge: 'Bientôt',
+      disabled: true // On ajoute une propriété pour bloquer le clic
     },
     {
       id: 'annales20242025',
       title: 'Annales 2024-2025',
-      subtitle: 'Dernier partiel officiel',
+      subtitle: '', // Sous-titre supprimé
       icon: '25',
       color: 'purple',
       badge: 'Nouveau'
@@ -23,7 +25,7 @@ const Dashboard = ({ onStart }) => {
     {
       id: 'annales20232024',
       title: 'Annales 2023-2024',
-      subtitle: 'Sujet année précédente',
+      subtitle: '', // Sous-titre supprimé
       icon: '24',
       color: 'orange',
       badge: null
@@ -31,7 +33,7 @@ const Dashboard = ({ onStart }) => {
     {
       id: 'annales20222023',
       title: 'Annales 2022-2023',
-      subtitle: 'Entraînement classique',
+      subtitle: '', // Sous-titre supprimé
       icon: '23',
       color: 'green',
       badge: null
@@ -39,54 +41,85 @@ const Dashboard = ({ onStart }) => {
     {
       id: 'annales20212022',
       title: 'Annales 2021-2022',
-      subtitle: 'Pour les experts',
+      subtitle: '', // Sous-titre supprimé
       icon: '22',
       color: 'red',
       badge: null
     }
   ];
 
-  // Fonction pour gérer les couleurs dynamiquement
-  const getColorClasses = (color) => {
+  // Fonction pour gérer les couleurs dynamiquement (Ajout du gris)
+  const getColorClasses = (color, disabled) => {
+    // Si c'est désactivé, on force un style grisâtre peu importe la couleur demandée
+    if (disabled) {
+        return 'bg-gray-50 text-gray-400 border-gray-200 cursor-not-allowed opacity-75';
+    }
+
     const colors = {
       blue:   'bg-blue-100 text-blue-600 group-hover:bg-blue-600 border-blue-200 hover:border-blue-400',
       purple: 'bg-purple-100 text-purple-600 group-hover:bg-purple-600 border-purple-200 hover:border-purple-400',
       orange: 'bg-orange-100 text-orange-600 group-hover:bg-orange-600 border-orange-200 hover:border-orange-400',
       green:  'bg-emerald-100 text-emerald-600 group-hover:bg-emerald-600 border-emerald-200 hover:border-emerald-400',
       red:    'bg-rose-100 text-rose-600 group-hover:bg-rose-600 border-rose-200 hover:border-rose-400',
+      gray:   'bg-gray-100 text-gray-500 border-gray-200', // Fallback si besoin
     };
     return colors[color] || colors.blue;
   };
 
   return (
-    <div className="space-y-8 animate-fade-in pb-10">
-      <div className="text-center space-y-2">
-        <h1 className="text-3xl font-bold text-gray-900">Banque de QCM Droit</h1>
-        <p className="text-gray-500">4 ans d'annales pour t'entraîner</p>
+    <div className="space-y-8 animate-fade-in pb-10 flex flex-col min-h-[80vh]">
+      
+      {/* --- HEADER --- */}
+      <div className="text-center space-y-3 mt-4">
+        <h1 className="text-3xl font-bold text-gray-900">Droit Commercial</h1>
+        <p className="text-gray-400 text-sm max-w-lg mx-auto">
+          Site pour s'entraîner pour l'exam de droit commercial sans TD (QCM à points négatifs)
+        </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* --- GRID --- */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow">
         {modules.map((module) => (
           <div 
             key={module.id}
-            onClick={() => onStart(module.id)}
-            className={`bg-white p-6 rounded-xl shadow-sm border transition group cursor-pointer hover:shadow-md ${getColorClasses(module.color).split(' ').slice(-1)}`} // Hack pour la bordure au hover
+            // On empêche le clic si disabled est true
+            onClick={() => !module.disabled && onStart(module.id)}
+            // On applique conditionnellement les classes
+            className={`p-6 rounded-xl shadow-sm border transition group 
+              ${module.disabled ? '' : 'cursor-pointer hover:shadow-md'} 
+              ${getColorClasses(module.color, module.disabled).split(' ').slice(-1)} bg-white`} 
           >
-            <div className={`h-12 w-12 rounded-lg flex items-center justify-center mb-4 transition group-hover:text-white ${getColorClasses(module.color).split(' ').slice(0, 3).join(' ')}`}>
+            <div className={`h-12 w-12 rounded-lg flex items-center justify-center mb-4 transition 
+              ${module.disabled ? 'bg-gray-200 text-gray-400' : `group-hover:text-white ${getColorClasses(module.color).split(' ').slice(0, 3).join(' ')}`}`}>
               <span className="font-bold text-xl">{module.icon}</span>
             </div>
             
-            <h3 className="text-lg font-bold mb-1">{module.title}</h3>
-            <p className="text-gray-500 text-xs mb-3">{module.subtitle}</p>
+            <h3 className={`text-lg font-bold mb-1 ${module.disabled ? 'text-gray-400' : 'text-gray-900'}`}>
+                {module.title}
+            </h3>
+            
+            {/* Affichage du sous-titre seulement s'il existe */}
+            {module.subtitle && (
+                <p className="text-gray-400 text-xs mb-3 italic">{module.subtitle}</p>
+            )}
             
             {module.badge && (
-              <span className={`inline-block text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider ${module.color === 'purple' ? 'bg-purple-100 text-purple-700' : 'bg-gray-100 text-gray-600'}`}>
+              <span className={`inline-block text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider 
+                ${module.disabled ? 'bg-gray-200 text-gray-500' : (module.color === 'purple' ? 'bg-purple-100 text-purple-700' : 'bg-gray-100 text-gray-600')}`}>
                 {module.badge}
               </span>
             )}
           </div>
         ))}
       </div>
+
+      {/* --- FOOTER --- */}
+      <div className="text-center py-6 border-t border-gray-100 mt-auto">
+        <p className="text-gray-400 text-xs">
+          Réalisé par <span className="font-semibold text-indigo-400">pierrepierremaker</span>
+        </p>
+      </div>
+
     </div>
   );
 };
