@@ -415,150 +415,150 @@ export const annales20212022 = [
     "explanation": "S'ils résident, ils ont besoin d'une carte de séjour spécifique (sauf UE). La réciprocité concerne surtout les non-résidents."
   },
   {
-    "id": 60,
-    "question": "La résidence principale de l’entrepreneur indépendant peut être saisie par ses créanciers professionnels même en l’absence de la déclaration ou de publication.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Elle est insaisissable de plein droit (automatiquement) depuis 2015."
+    id: 60,
+    question: "La résidence principale de l'entrepreneur indépendant peut être saisie par ses créanciers professionnels même en l'absence de la déclaration ou de publication",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Depuis la loi de 2022, la protection est automatique. Le patrimoine personnel est séparé du professionnel de plein droit et la résidence principale est insaisissable par les créanciers professionnels."
   },
   {
-    "id": 61,
-    "question": "La résidence secondaire de l’entrepreneur indépendant peut être saisie par ses créanciers professionnels même en l’absence de la déclaration d’insaisissabilité.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "Pour la résidence secondaire, il faut faire une déclaration devant notaire pour la protéger."
+    id: 61,
+    question: "La résidence principale de l'entrepreneur indépendant peut être saisie par ses créanciers professionnels même en l'absence de la déclaration d'insaisissabilité",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Cela a changé en 2022 (ce QCM date de 2021/22). Aujourd'hui, l'insaisissabilité est automatique et aucune déclaration n'est nécessaire."
   },
   {
-    "id": 62,
-    "question": "L’EIRL est une société unipersonnelle.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "C'est un entrepreneur individuel (pas de personne morale) avec un patrimoine d'affectation."
+    id: 62,
+    question: "L'EIRL est une société unipersonnelle",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. L'EIRL n'était pas une société mais une ENTREPRISE (Entreprise Individuelle à Responsabilité Limitée). De plus, ce statut n'existe plus depuis 2022, remplacé par le statut unique d'Entrepreneur Individuel."
   },
   {
-    "id": 63,
-    "question": "Les sociétés relèvent du droit commercial dès lors qu’elles sont immatriculées au RCS.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Les sociétés civiles sont immatriculées mais restent civiles."
+    id: 63,
+    question: "Les sociétés relèvent du droit commercial dès lors qu'elles sont immatriculées au RCS",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. L'immatriculation au RCS ne confère pas la qualité de commerçant, elle la constate. Certaines sociétés immatriculées peuvent rester civiles."
   },
   {
-    "id": 64,
-    "question": "Les sociétés civiles deviennent commerciales si elles font habituellement des actes de commerce.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "Par leur objet (requalification)."
+    id: 64,
+    question: "Les sociétés civiles deviennent commerciales si elles font habituellement des actes de commerce",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Elles ne changent pas de nature juridique automatiquement. Elles peuvent devenir des 'sociétés créées de fait' ou être soumises aux procédures collectives, mais ne deviennent pas des sociétés commerciales par la forme."
   },
   {
-    "id": 65,
-    "question": "Les associations peuvent exercer le commerce.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "Oui (paracommercialisme), si prévu aux statuts."
+    id: 65,
+    question: "Les associations peuvent exercer le commerce",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Une association peut devenir 'fiscalement' commerçante, mais elle ne peut pas l'être juridiquement car elle n'a pas de but lucratif (pas de partage des bénéfices entre membres)."
   },
   {
-    "id": 66,
-    "question": "Les associations ne peuvent pas s’immatriculer au RCS.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "En principe non (elles sont déclarées en préfecture), sauf exceptions spécifiques (émission d'obligations), mais la règle générale du cours est qu'elles ne s'immatriculent pas."
+    id: 66,
+    question: "Les associations ne peuvent pas s'immatriculer au RCS",
+    options: ["Vrai", "Faux"],
+    answer: "Vrai",
+    explanation: "VRAI. Car elles ne sont pas commerçantes par nature."
   },
   {
-    "id": 67,
-    "question": "Les associations peuvent faire l’objet d’une procédure collective devant le tribunal de commerce.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Devant le Tribunal Judiciaire (civil)."
+    id: 67,
+    question: "Les associations peuvent faire l'objet d'une procédure collective devant le tribunal de commerce",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Depuis 2022/23, les associations (même à but lucratif/économique) relèvent toujours du Tribunal Judiciaire (TJ), et non du Tribunal de Commerce."
   },
   {
-    "id": 68,
-    "question": "Le Groupement d’Intérêt Economique a toujours la qualité de commerçant.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Cela dépend de son objet."
+    id: 68,
+    question: "Le Groupement d'Intérêt Économique (GIE) a toujours la qualité de commerçant",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Un GIE peut être civil OU commercial, selon la nature de son activité."
   },
   {
-    "id": 69,
-    "question": "Le conjoint qui participe au commerce de son époux(se) est automatiquement qualifié de commerçant.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Il est présumé non-commerçant (sauf actes séparés)."
+    id: 69,
+    question: "Le conjoint qui participe au commerce de son époux(se) est automatiquement qualité de commerçant",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. La participation ne suffit pas. Le conjoint doit opter pour un statut précis : conjoint collaborateur, conjoint salarié ou conjoint associé."
   },
   {
-    "id": 70,
-    "question": "Si le commerçant est marié, il doit obligatoirement faire mention au RCS de sa situation matrimoniale et de son régime matrimonial.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Obligation supprimée (bien que dommageable pour les tiers)."
+    id: 70,
+    question: "Si le commerçant est marié, il doit obligatoirement faire mention au RCS de sa situation matrimoniale et de son régime matrimonial",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Ce n'est pas une obligation absolue dans tous les cas. La déclaration est obligée si le commerçant n'est pas en séparation de biens ou si un bien commun est affecté à l'exploitation."
   },
   {
-    "id": 71,
-    "question": "En cas de dettes professionnelles contractées par un commerçant marié, pourront être saisis tous les biens du couple.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Cela dépend du régime. En communauté, les biens propres du conjoint sont protégés."
+    id: 71,
+    question: "En cas de dettes professionnelles contractées par un commerçant marié, tous les biens du couple pourront être saisis",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Cela dépend du régime matrimonial et de l'engagement (ou non) du conjoint."
   },
   {
-    "id": 72,
-    "question": "Le partenaire Pacsé ne peut pas participer sans statut au commerce de son concubin.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "Il doit choisir un statut (salarié, collaborateur, associé)."
+    id: 72,
+    question: "Le partenaire Pacsé ne peut pas participer sans statut au commerce de son concubin",
+    options: ["Vrai", "Faux"],
+    answer: "Vrai",
+    explanation: "VRAI. Il y a nécessité d'adopter un statut juridique précis pour participer à l'activité."
   },
   {
-    "id": 73,
-    "question": "En cas de fonds de commerce commun, les époux doivent prendre ensemble toutes les décisions qui concernent le fonds de commerce, sous peine de nullité.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "Pour les actes graves (aliéner, nantir), le consentement des deux est requis (cogestion)."
+    id: 73,
+    question: "En cas de fonds de commerce commun, les époux doivent prendre ensemble toutes les décisions qui concernent les fonds de commerce sous peine de nullité",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. L'accord des deux est requis seulement pour les actes les plus graves (vente du fonds, apport en société, nantissement). La gestion courante (gérance, location) ne nécessite pas forcément la double signature."
   },
   {
-    "id": 74,
-    "question": "Le commerçant de fait peut se voir opposer la qualité de commerçant, mais il ne peut la revendiquer.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "Il subit les charges mais n'a pas les droits."
+    id: 74,
+    question: "Le commerçant de fait peut se voir opposer la qualité de commerçant, mais il ne peut la revendiquer",
+    options: ["Vrai", "Faux"],
+    answer: "Vrai",
+    explanation: "VRAI. Le commerçant de fait exerce sans être inscrit. On lui applique les règles contraignantes du droit commercial (obligations), mais il ne peut pas en revendiquer les avantages/droits."
   },
   {
-    "id": 75,
-    "question": "Les événements sujets à la publication au RCS qui n’ont pas été publiés sont inopposables, mais seulement aux tiers de bonne foi.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "Si le tiers savait (mauvaise foi), on peut lui opposer le fait même non publié."
+    id: 75,
+    question: "Les événements sujets à la publication au RCS qui n'ont pas été publiés sont inopposables, mais seulement aux tiers de bonne foi",
+    options: ["Vrai", "Faux"],
+    answer: "Vrai",
+    explanation: "VRAI. Si l'événement n'est pas publié, le commerçant ne peut pas l'utiliser contre les tiers. MAIS les tiers peuvent s'en prévaloir s'ils en avaient connaissance (mauvaise foi). La protection concerne donc les tiers de bonne foi (ceux qui ignoraient l'événement)."
   },
   {
-    "id": 76,
-    "question": "La comptabilité d’un commerçant peut être utilisée dans un procès contre lui mais seulement par un autre commerçant.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Elle peut être invoquée contre lui par n'importe qui (c'est une preuve parfaite contre lui)."
+    id: 76,
+    question: "La comptabilité d'un commerçant peut être utilisée dans un procès contre lui mais seulement par un autre commerçant",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Tout intéressé (et pas seulement un commerçant) peut utiliser la comptabilité d'un commerçant contre lui (exemple : l'administration fiscale)."
   },
   {
-    "id": 77,
-    "question": "Lors d’un procès, si elle est nécessaire à la recherche de la vérité, la comptabilité d’un commerçant doit toujours être communiquée à l’adversaire.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "La communication (intégrale) est rare. C'est la production (extrait) qui est courante."
+    id: 77,
+    question: "Lors d'un procès, si elle est nécessaire à la recherche de la vérité, la comptabilité d'un commerçant doit toujours être communiquée à l'adversaire",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. La communication n'est pas automatique. Elle n'est possible que sur décision du juge, et seulement si elle est jugée indispensable."
   },
   {
-    "id": 78,
-    "question": "Le fonds de commerce est un bien immobilier mais soumis au régime des biens mobiliers.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "C'est un bien meuble incorporel."
+    id: 78,
+    question: "Le fonds de commerce est un bien immobilier mais soumis au régime des biens mobiliers",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Le fonds de commerce n'est PAS un bien immobilier. C'est un bien MEUBLE incorporel, et donc soumis au régime juridique des meubles."
   },
   {
-    "id": 79,
-    "question": "Le fonds de commerce peut comprendre le bail commercial, le nom commercial, l’enseigne, la clientèle et l’achalandage.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "Ce sont les éléments classiques."
+    id: 79,
+    question: "Le fonds de commerce peut comprendre le bail commercial, le nom commercial, l'enseigne, la clientèle et l'achalandage",
+    options: ["Vrai", "Faux"],
+    answer: "Vrai",
+    explanation: "VRAI. Ce sont les éléments constitutifs classiques du fonds de commerce."
   },
   {
-    "id": 80,
-    "question": "Le franchisé et le concessionnaire ne peuvent jamais se prévaloir d’un fonds de commerce car la clientèle appartient toujours au fournisseur, titulaire de la marque.",
-    "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Ils ont une clientèle locale propre (depuis 2002)."
+    id: 80,
+    question: "La franchise et le concessionnaire ne peuvent jamais se prévaloir d'un fonds de commerce car la clientèle appartient toujours au fournisseur, titulaire de la marque",
+    options: ["Vrai", "Faux"],
+    answer: "Faux",
+    explanation: "FAUX. Le franchisé dispose de sa propre clientèle locale. Le fait de bénéficier de la notoriété de la marque du franchiseur n'exclut pas l'existence d'une clientèle personnelle."
   }
 ];
