@@ -320,8 +320,8 @@ export const annales20242025 = [
     "id": 46,
     "question": "L’entrepreneur indépendant, comme toute personne juridique, n’a en principe qu’un seul patrimoine.",
     "options": ["Vrai", "Faux"],
-    "correctAnswer": 0,
-    "explanation": "Principe de l'unicité du patrimoine (théorie d'Aubry et Rau), sauf option pour l'EIRL (avant) ou statut spécifique. Note : Le cours insiste sur le principe général d'unicité."
+    "correctAnswer": 1,
+    "explanation": "Depuis la loi du 14 février 2022, l'entrepreneur individuel dispose automatiquement de deux patrimoines distincts (professionnel et personnel), dérogeant ainsi au principe classique d'unicité."
   },
   {
     "id": 47,
@@ -355,8 +355,8 @@ export const annales20242025 = [
     "id": 51,
     "question": "Le Registre National des Entreprises est un registre centralisé, dématérialisé, accessible gratuitement à tous, et qui concerne toutes les entreprises.",
     "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Question piège récurrente. Bien que centralisé, l'accès complet et certaines formalités ne sont pas intégralement gratuits dans la logique des anciennes annales (comparé au RCS payant) et le cours se réfère surtout au RCS. Dans les annales 2022, cette question précise était \"Faux\"."
+    "correctAnswer": 0,
+    "explanation": "Mis en place le 1er janvier 2023 et géré par l'INPI, le RNE recense obligatoirement l'ensemble des activités économiques françaises (commerciales, artisanales, libérales et agricoles) dans une base de données unique et entièrement numérique. Il garantit la transparence de la vie économique en offrant un accès public et gratuit aux informations légales de ces entreprises."
   },
   {
     "id": 52,
