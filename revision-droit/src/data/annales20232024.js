@@ -408,8 +408,8 @@ export const annales20232024 = [
       "Vrai",
       "Faux"
     ],
-    "correctAnswer": 1,
-    "explanation": "Principe de l'unicité du patrimoine. Ils peuvent saisir les biens personnels (sauf la résidence principale protégée de droit), à moins d'avoir opté pour l'EIRL (patrimoine d'affectation)."
+    "correctAnswer": 0,
+    "explanation": "Depuis 2022, l’entrepreneur individuel dispose de plein droit d’un patrimoine personnel distinct, insaisissable par les créanciers professionnels, sauf exceptions."
   },
   {
     "id": 42,
@@ -419,7 +419,7 @@ export const annales20232024 = [
       "Faux"
     ],
     "correctAnswer": 0,
-    "explanation": "Insaisissabilité de droit (automatique) depuis la loi Macron 2015."
+    "explanation": "La résidence principale de l’entrepreneur individuel est insaisissable de plein droit par les créanciers professionnels, protection renforcée depuis 2022 par la séparation des patrimoines."
   },
   {
     "id": 43,
@@ -429,7 +429,7 @@ export const annales20232024 = [
       "Faux"
     ],
     "correctAnswer": 0,
-    "explanation": "Tout bien foncier non affecté à l'usage professionnel peut être déclaré insaisissable (acte notarié)."
+    "explanation": "Si la déclaration d’insaisissabilité demeure possible, la résidence secondaire de l’entrepreneur individuel est aujourd’hui en principe protégée par la séparation de plein droit des patrimoines instaurée en 2022."
   },
   {
     "id": 44,
@@ -469,7 +469,7 @@ export const annales20232024 = [
       "Faux"
     ],
     "correctAnswer": 1,
-    "explanation": "Il n'est commerçant que si son objet est commercial. L'immatriculation donne la personnalité morale, pas forcément la commercialité."
+    "explanation": "Le GIE est une structure de coopération entre entreprises destinée à faciliter leur activité ; son immatriculation au RCS lui donne la personnalité morale, mais la qualité de commerçant seulement si son objet est commercial."
   },
   {
     "id": 48,

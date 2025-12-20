@@ -293,14 +293,14 @@ export const annales20222023 = [
     "question": "Le local commercial peut faire l’objet d’une déclaration d’insaisissabilité.",
     "options": ["Vrai", "Faux"],
     "correctAnswer": 1,
-    "explanation": "Seul le foncier non affecté à l'usage professionnel (ex: résidence secondaire) peut être déclaré insaisissable."
+    "explanation": "Depuis 2022, l’entrepreneur individuel dispose de deux patrimoines ; le local commercial relève du patrimoine professionnel et reste saisissable par les créanciers professionnels, sans possibilité de déclaration d’insaisissabilité."
   },
   {
     "id": 43,
     "question": "L’entrepreneur indépendant a en principe deux patrimoines : un patrimoine professionnel et un patrimoine personnel.",
     "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Le principe historique (théorie d'Aubry et Rau) est l'unicité du patrimoine. La séparation (EIRL ou nouveau statut) est une dérogation ou une option. Rappel : Dans l'annale 2024, \"n'a qu'un seul patrimoine\" était Vrai."
+    "correctAnswer": 0,
+    "explanation": "Depuis 2022, l’entrepreneur individuel dispose automatiquement d’un patrimoine professionnel distinct de son patrimoine personnel."
   },
   {
     "id": 44,
@@ -341,8 +341,8 @@ export const annales20222023 = [
     "id": 49,
     "question": "Le Registre National des Entreprises est un registre centralisé, dématérialisé et gratuit qui concerne toutes les entreprises.",
     "options": ["Vrai", "Faux"],
-    "correctAnswer": 1,
-    "explanation": "Question récurrente. Considérée comme Faux dans les annales (coût, accès complet) (comparé au 2024)."
+    "correctAnswer": 0,
+    "explanation": "Le RNE est un registre unique, centralisé et dématérialisé, accessible gratuitement pour l’inscription et la consultation des informations essentielles des entreprises"
   },
   {
     "id": 50,
