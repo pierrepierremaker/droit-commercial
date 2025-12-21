@@ -58,6 +58,28 @@ const QuizManager = ({ quizId, onExit }) => {
     }
   };
 
+  // Raccourcis clavier
+  useEffect(() => {
+    if (isFinished) return;
+
+    const handleKeyPress = (e) => {
+      // Touches 1-4 pour sélectionner une réponse
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        const questionCard = document.querySelector('[data-question-card]');
+        if (questionCard) {
+          const index = parseInt(e.key) - 1;
+          const buttons = questionCard.querySelectorAll('[data-option-button]');
+          if (buttons[index]) {
+            buttons[index].click();
+          }
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [isFinished, currentIndex]);
+
   if (isFinished) {
     const percentage = Math.round((score / questions.length) * 100);
     let message = percentage >= 50 ? "🎉 C'est validé !" : "⚠️ À revoir";

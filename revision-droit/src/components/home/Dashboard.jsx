@@ -1,4 +1,5 @@
 import React from 'react';
+import { GraduationCap, BookOpen } from 'lucide-react';
 
 const Dashboard = ({ onStart }) => {
   
@@ -82,15 +83,11 @@ const Dashboard = ({ onStart }) => {
         {modules.map((module) => (
           <div 
             key={module.id}
-            // On empêche le clic si disabled est true
-            onClick={() => !module.disabled && onStart(module.id)}
-            // On applique conditionnellement les classes
-            className={`p-6 rounded-xl shadow-sm border transition group 
-              ${module.disabled ? '' : 'cursor-pointer hover:shadow-md'} 
-              ${getColorClasses(module.color, module.disabled).split(' ').slice(-1)} bg-white`} 
+            className={`p-6 rounded-xl shadow-sm border transition bg-white
+              ${module.disabled ? '' : 'hover:shadow-md'}`} 
           >
             <div className={`h-12 w-12 rounded-lg flex items-center justify-center mb-4 transition 
-              ${module.disabled ? 'bg-gray-200 text-gray-400' : `group-hover:text-white ${getColorClasses(module.color).split(' ').slice(0, 3).join(' ')}`}`}>
+              ${module.disabled ? 'bg-gray-200 text-gray-400' : `${getColorClasses(module.color).split(' ').slice(0, 3).join(' ')}`}`}>
               <span className="font-bold text-xl">{module.icon}</span>
             </div>
             
@@ -104,10 +101,30 @@ const Dashboard = ({ onStart }) => {
             )}
             
             {module.badge && (
-              <span className={`inline-block text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider 
+              <span className={`inline-block text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider mb-4
                 ${module.disabled ? 'bg-gray-200 text-gray-500' : (module.color === 'purple' ? 'bg-purple-100 text-purple-700' : 'bg-gray-100 text-gray-600')}`}>
                 {module.badge}
               </span>
+            )}
+
+            {/* Boutons de mode */}
+            {!module.disabled && (
+              <div className="space-y-2 mt-4">
+                <button
+                  onClick={() => onStart(module.id, false)}
+                  className="w-full flex items-center justify-center gap-2 py-2 px-3 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium hover:bg-blue-100 transition border border-blue-200"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  Entraînement
+                </button>
+                <button
+                  onClick={() => onStart(module.id, true)}
+                  className="w-full flex items-center justify-center gap-2 py-2 px-3 bg-gradient-to-r from-orange-50 to-red-50 text-orange-700 rounded-lg text-sm font-medium hover:from-orange-100 hover:to-red-100 transition border border-orange-200"
+                >
+                  <GraduationCap className="w-4 h-4" />
+                  Mode Examen
+                </button>
+              </div>
             )}
           </div>
         ))}

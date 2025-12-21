@@ -1,9 +1,24 @@
 // src/components/quiz/QuestionCard.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const QuestionCard = ({ data, onAnswer, onNext, isLast }) => {
   const [hasAnswered, setHasAnswered] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
+
+  // Support de la touche Entrée pour passer à la question suivante
+  useEffect(() => {
+    if (!hasAnswered) return;
+
+    const handleKeyPress = (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onNext();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [hasAnswered, onNext]);
 
   const handleOptionClick = (index) => {
     if (hasAnswered) return;
@@ -33,7 +48,7 @@ const QuestionCard = ({ data, onAnswer, onNext, isLast }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100" data-question-card>
       <div className="p-6 md:p-8">
         <h3 className="text-xl font-bold text-gray-800 mb-8 leading-relaxed">
           {data.question}
@@ -45,9 +60,13 @@ const QuestionCard = ({ data, onAnswer, onNext, isLast }) => {
               key={index}
               onClick={() => handleOptionClick(index)}
               disabled={hasAnswered}
+              data-option-button
               className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-200 ${getButtonColor(index, option)}`}
             >
-              {option}
+              <div className="flex items-center justify-between">
+                <span>{option}</span>
+                {!hasAnswered && <span className="text-xs text-gray-400 font-mono">{index + 1}</span>}
+              </div>
             </button>
           ))}
         </div>
@@ -66,10 +85,15 @@ const QuestionCard = ({ data, onAnswer, onNext, isLast }) => {
 
             <button
               onClick={onNext}
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-md"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-md flex items-center justify-center gap-2"
+              autoFocus
             >
               {isLast ? "Voir mon résultat" : "Question Suivante →"}
+              <span className="text-xs opacity-75">(Entrée)</span>
             </button>
+            <p className="text-xs text-gray-500 text-center mt-2">
+              💡 Utilisez les touches {data.options.length === 2 ? '1-2' : `1-${data.options.length}`} pour répondre rapidement
+            </p>
           </div>
         )}
       </div>

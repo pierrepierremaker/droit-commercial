@@ -4,6 +4,9 @@ Application web interactive pour réviser les concepts fondamentaux du droit com
 
 ## ✨ Fonctionnalités
 
+- **Deux modes d'apprentissage** :
+  - 🎯 **Mode Entraînement** : Réponses instantanées avec explications détaillées
+  - 📝 **Mode Examen** : Conditions réelles d'examen avec timer de 60 minutes et barème officiel
 - **Quiz interactifs** : Testez vos connaissances sur les thématiques clés du droit commercial
 - **Annales d'examens** : Accédez aux questions des années précédentes (2021-2025)
 - **Modules thématiques** :
@@ -12,6 +15,18 @@ Application web interactive pour réviser les concepts fondamentaux du droit com
   - Baux commerciaux
 - **Interface moderne** : Design responsive et intuitif avec Tailwind CSS
 - **Suivi des performances** : Analytics intégrés pour suivre votre progression
+
+### 📝 Mode Examen
+
+Le mode examen simule les conditions réelles de l'épreuve :
+
+- ⏱️ **Timer de 60 minutes** : Chronomètre dégressif avec alerte à 5 minutes
+- 📊 **Barème officiel** :
+  - ✅ Bonne réponse : **+1 point**
+  - ❌ Mauvaise réponse : **-1 point**
+  - ⏭️ Pas de réponse : **0 point** (évite les pénalités si vous ne savez pas)
+- 🔄 **Navigation libre** : Possibilité de revenir sur les questions précédentes
+- 📈 **Résultats détaillés** : Analyse complète avec corrections et explications
 
 ## 🚀 Technologies utilisées
 
@@ -86,10 +101,21 @@ src/
 
 ## 🎯 Utilisation
 
+### Mode Entraînement
 1. **Page d'accueil** : Sélectionnez un module thématique ou une année d'annales
-2. **Quiz** : Répondez aux questions en sélectionnant la réponse correcte
-3. **Résultats** : Consultez votre score et les corrections détaillées
-4. **Navigation** : Retournez à l'accueil pour choisir un nouveau quiz
+2. **Cliquez sur "Entraînement"** : Accédez au mode quiz classique
+3. **Répondez aux questions** : Obtenez des corrections instantanées avec explications
+4. **Consultez votre score** : Visualisez vos résultats à la fin
+
+### Mode Examen
+1. **Page d'accueil** : Choisissez votre sujet d'examen
+2. **Cliquez sur "Mode Examen"** : Lancez la simulation d'examen
+3. **Gérez votre temps** : Vous disposez de 60 minutes
+4. **Stratégie de réponse** :
+   - Répondez si vous êtes sûr(e) : **+1 ou -1 point**
+   - Passez la question si vous hésitez : **0 point** (évite les malus)
+5. **Naviguez librement** : Vous pouvez revenir sur les questions
+6. **Terminez l'examen** : Consultez vos résultats détaillés avec toutes les corrections
 
 ## 🤝 Contribution
 
